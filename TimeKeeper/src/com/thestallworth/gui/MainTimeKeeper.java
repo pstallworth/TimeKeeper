@@ -70,17 +70,8 @@ public class MainTimeKeeper implements ActionListener {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		GUIFactory factory = GUIFactory.getGUIFactory();
-		
-//		JMenuBar mb = (JMenuBar)factory.getMenuBar();
-		
-		JMenuBar menubar = new JMenuBar();
-		JMenu menu = new JMenu("First Menu Item");
-		JMenuItem menuItem = new JMenuItem("First sub item");
-		
-		menubar.add(menu);
-		menu.add(menuItem);
-		
-		frame.setJMenuBar(menubar);
+				
+		frame.setJMenuBar(factory.getMenuBar());
 		
 		JPanel contentPane = new JPanel(new GridBagLayout());
 		contentPane.setBorder(new LineBorder(Color.CYAN));
@@ -118,9 +109,7 @@ public class MainTimeKeeper implements ActionListener {
 	    c.weightx = 0.3;
 	    c.weighty = 0;
 	    
-	    JPanel bp = (JPanel)factory.getButtonPanel();
-	    
-	    secondPanel.add(bp, c);
+	    secondPanel.add(factory.getButtonPanel(), c);
 		tabbedPane.addTab("Task Tab", secondPanel);
 		
 		contentPane.add(secondPanel);

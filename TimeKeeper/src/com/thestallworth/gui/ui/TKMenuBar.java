@@ -10,11 +10,10 @@ public class TKMenuBar extends JMenuBar {
 
 	public TKMenuBar() {
 		
-		JMenuBar menubar = new JMenuBar();
 		JMenu menu = new JMenu("First Menu Item");
 		JMenuItem menuItem = new JMenuItem("First sub item");
 		
-		menubar.add(menu);
+		this.add(menu);
 		menu.add(menuItem);
 	}
 
